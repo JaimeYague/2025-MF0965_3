@@ -6,6 +6,8 @@ class CustomerRepository:
         query = """
         SELECT Code, Name, Population
         FROM `world`.`country`;
+        SELECT Name, Population 
+        FROM `city`.`world`;
         """
         conn = get_connection()
         cursor = conn.cursor()
@@ -18,7 +20,7 @@ class CustomerRepository:
     def delete(self, customer_id):
         conn = get_connection()
         cursor = conn.cursor()
-        cursor.execute("DELETE FROM customer WHERE customer_id = %s", (customer_id,))
+        cursor.execute("DELETE FROM world WHERE Code = %s", (Code,))
         conn.commit()
         cursor.close()
         conn.close()

@@ -3,10 +3,10 @@ from tkinter import ttk, messagebox
 from customer_service import CustomerService
 
 
-class SakilaUI:
+class WorldUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("CRUD Clientes - Sakila")
+        self.root.title("CRUD Clientes - World")
         self.service = CustomerService()
         self._build_ui()
         self._load_customers()
