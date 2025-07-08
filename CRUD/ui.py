@@ -12,7 +12,7 @@ class SakilaUI:
         self._load_customers()
 
     def _build_ui(self):
-        cols = ('ID', 'Nombre', 'Apellidos', 'Dirección', 'Distrito', 'Ciudad', 'CP')
+        cols = ('Code', 'Name', 'Population')
         self.tree = ttk.Treeview(self.root, columns=cols, show='headings')
         for col in cols:
             self.tree.heading(col, text=col)
