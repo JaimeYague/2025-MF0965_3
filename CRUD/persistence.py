@@ -4,9 +4,10 @@ from db import get_connection
 class CustomerRepository:
     def fetch_all(self):
         query = """
-        SELECT Code, Name, Population
+        SELECT country.Code, country.Name, country.Population, city.Name, city.Population
         FROM `world`.`country`
-        LEFT JOIN `city`;
+        LEFT JOIN `city`
+        ON country.Code=city.CountryCode;
         """
         
         conn = get_connection()
