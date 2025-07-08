@@ -5,10 +5,10 @@ class CustomerRepository:
     def fetch_all(self):
         query = """
         SELECT Code, Name, Population
-        FROM `world`.`country`;
-        SELECT Name, Population 
-        FROM `city`.`world`;
+        FROM `world`.`country`
+        LEFT JOIN `city`;
         """
+        
         conn = get_connection()
         cursor = conn.cursor()
         cursor.execute(query)

@@ -12,7 +12,7 @@ class WorldUI:
         self._load_customers()
 
     def _build_ui(self):
-        cols = ('Code', 'Name', 'Population')
+        cols = ('Code', 'Nombre', 'Poblacion', 'Capital', 'Poblacion Capital')
         self.tree = ttk.Treeview(self.root, columns=cols, show='headings')
         for col in cols:
             self.tree.heading(col, text=col)
